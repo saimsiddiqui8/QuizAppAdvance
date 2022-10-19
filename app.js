@@ -114,6 +114,7 @@ function start() {
     ans2.innerHTML = structure.b
     ans3.innerHTML = structure.c
     ans4.innerHTML = structure.d
+    
 };
 
 function getcheckAnswer() {
@@ -138,12 +139,18 @@ function loseSound() {
     audio.play();
 }
 
+function pgTurn() {
+    var audio = new Audio('./pageTurn.mp3');
+    audio.loop = false;
+    audio.play();
+}
+
 
 function hide() {
     start();
+    pgTurn()
     arrayCount = 1;
     document.querySelector("#start").style.display = "none";
-    document.querySelector("#round").style.display = "none";
     document.querySelector("#rules").style.display = "block";
     document.body.style.display = "block";
     document.body.style.height = "40vh";
